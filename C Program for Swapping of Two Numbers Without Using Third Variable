@@ -1,0 +1,15 @@
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int a,b;
+    clrscr();
+    printf("Enter the Values for a & b to Swap: ");
+    scanf("%d %d",&a,&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("After Swapping the Values of a & b are :%d %d",a,b);
+    getch();
+}
