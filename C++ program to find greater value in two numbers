@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+  {
+    int f,s;
+    cout<<"Enter first number\n";
+    cin>>f;
+     cout<<"Enter second number\n";
+    cin>>s;
+    if(f>s)
+    cout<<"First number is greater";
+    if(f<s)
+    cout<<"Second number is greater"; 
+	if(f==s)
+	cout<<"Both are equal";   
+}
