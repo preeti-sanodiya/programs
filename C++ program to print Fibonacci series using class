@@ -1,0 +1,30 @@
+#include<iostream.h>
+using namespace std;
+class series
+{
+public:
+ int a, b, c;
+void generate(int);
+};
+void series ::generate(int n)
+{
+ a = 0; b = 1;
+ cout << a << " " <<b;
+ for(int i=1; i<= n-2; i++)
+ {
+ c = a + b;
+cout << " " << c;
+ a = b;
+ b = c;
+ }
+}
+int main()
+{
+cout << "Fibonacci series" << endl;
+cout << "Enter number of items in the series: ";
+ int n;
+ cin  >> n;
+ series series;
+ series . generate(n);
+ return 0;
+}
