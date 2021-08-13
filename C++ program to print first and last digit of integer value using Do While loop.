@@ -1,0 +1,17 @@
+#include <iostream.h>
+using namespace std; 
+int main() 
+{ 
+ int no,b,f;
+ cout<<"Enter any number\n";
+ cin>>no;
+ f=no%10;
+ do
+ {
+ b=no%10;
+ no=no/10;	
+ } 
+ while(no!=0);
+ cout<<"First digit="<<b<<" and Last digit="<<f;
+}   
+
