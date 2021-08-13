@@ -1,0 +1,17 @@
+#include <iostream.h>
+using namespace std; 
+int main() 
+{ 
+ int no,b;
+ cout<<"Enter any number\n";
+ cin>>no;
+ cout<<"Reverse is given below\n";
+ do
+ {
+b=no%10;
+cout<<b;
+ no=no/10;	
+ } 
+ while(no!=0);
+}   
+
