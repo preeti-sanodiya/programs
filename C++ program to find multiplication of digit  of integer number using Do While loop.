@@ -1,0 +1,17 @@
+#include <iostream.h>
+using namespace std; 
+int main() 
+{ 
+ int no,b,m=1;
+ cout<<"Enter any number\n";
+ cin>>no;
+ do
+ {
+ b=no%10;
+ m=m*b;
+ no=no/10;	
+ } 
+ while(no!=0);
+ cout<<"Total multiply of digits="<<m;
+}   
+
