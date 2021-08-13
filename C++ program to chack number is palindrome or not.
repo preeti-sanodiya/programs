@@ -1,0 +1,21 @@
+#include <iostream.h>
+using namespace std; 
+int main() 
+{ 
+ int no,b,rev=0,cpy;
+ cout<<"Enter any number\n";
+ cin>>no;
+ cpy=no;
+ do
+ {
+ b=no%10;
+ rev=rev*10+b;
+ no=no/10;	
+ } 
+ while(no!=0);
+ if(cpy==rev) 
+ cout<<"Palindrome";
+ else
+ cout<<"Not Palindrome";
+}   
+
