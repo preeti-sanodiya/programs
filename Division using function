@@ -1,0 +1,12 @@
+#include<iostream.h>
+using namespace std;
+void add()
+{
+int x,y=40,z=5;
+x=y/z;
+cout<<"Div="<<x;
+}
+int main()
+{
+add();
+}
