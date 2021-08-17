@@ -1,0 +1,25 @@
+#include<iostream.h>
+using namespace std;
+int main()
+{
+int a[10]={5,4,3,8,9,7,1,5,2,6};
+int i,j,temp;
+cout<<"Data before sorting is given:\n";
+for(i=0;i<10;i++)
+cout<<a[i]<<" ";
+for(i=0;i<10;i++)
+{
+for(j=0;j<10-i;j++)
+{
+if(a[j]<a[j+1])
+ {
+ temp=a[j];
+a[j]=a[j+1];
+ a[j+1]=temp;
+  }
+ }
+ }
+  cout<<"\nData After sorting in descending order is given:\n";
+for(i=0;i<10;i++)
+cout<<a[i]<<" ";
+}
