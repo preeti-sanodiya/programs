@@ -1,0 +1,12 @@
+#include<iostream.h>
+using namespace std;
+void add()
+{
+int x,y=7,z=5;
+x=y+z;
+cout<<"Add="<<x;
+}
+int main()
+{
+add();
+}
