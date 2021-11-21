@@ -1,0 +1,207 @@
+# include <iostream.h>
+
+# include <c.type.h> 
+
+#include<string.h>
+
+Class Hexnumber
+
+{
+
+ Int data[15];
+
+Int n;
+
+Public:
+
+Hexnumber() {n=0;}
+
+Void read();
+
+Void print();
+
+Void leftshift(int count);
+
+Friend hexa number add(hexanumber,hexanumber);
+
+Friend hexanumber multiply(hexanumber,hexanumber)
+
+};
+
+Void hexnumber::left shift(int count)
+
+{
+
+ n=n+count
+
+for(;count>0;count--)
+
+ data[n+count-1]=0;
+
+}
+
+Void hexnumber::read()
+
+{
+
+ Char a[10];
+
+Int i ;
+
+Cin>> a;
+
+For(i=0;a[i]!=’\0’;i++)
+
+{
+
+If(isdigit(a[i]))
+
+data[i]=a[i] & 0xf;
+
+else
+
+data[i]=(a[i] & 0xf) + 9;
+
+}
+
+n=i
+
+}
+
+Void hexnumber::print()
+
+{
+
+int i;
+
+for(i=0;i<n;i++0
+
+if(data[i]<=9)
+
+count<<data[i];
+
+else
+
+count<<(char)(data[i]+55);
+
+}
+
+Hexnumber add(hexnumber a, hexnumber b)
+
+ {
+
+ hexnumber c;
+
+ int I,j,k,digita,digitb,carry=0;
+
+ i=a,n-1;
+
+ j=b,n-1;
+
+ if(a,n>b,n)
+
+ k=a,n;
+
+else
+
+ k=b,n;
+
+c,n=k+1;
+
+for(;i>=0 || j>=0;i--,j--,k--)
+
+{
+
+ digita=digitb=0;
+
+if(i>=0)
+
+ digita=a, data[i];
+
+if(j>=0)
+
+ digitb=b,data[j];
+
+c.data[k]=(carry+digita+digitb)%16;
+
+carry=(carry+digita+digitb)/16;
+
+}
+
+c.data[k]=carry;
+
+return(c);
+
+}
+
+Hexnumber multiply(hexnumber x, hexnumber y)
+
+{ 
+
+ Hexnumber z, temp;
+
+ int n;
+
+ int count=0,product,carry=0,i,j,digit;
+
+ for(i=y,n-1;i>=0;i--)
+
+{
+
+digit=y,data[i];
+
+for(j=x,n-1;j>=0;j--)
+
+ {
+
+ Product=digit*x.data[j]+carry;
+
+ Temp.data[j+1]-product%16;
+
+ Carry=product/16;
+
+ }
+
+Temp.data[j+1]=carry;
+
+Temp,n=x,n+1;
+
+Temp.leftshift(count);
+
+Count++;
+
+Z=add(z,temp);
+
+}
+
+return z;
+
+
+
+Voidmain()
+
+{
+
+Hexnumber a,b,c;
+
+Count<<”\n Enter first hex numbers ;”;
+
+a.read();
+
+count<<”\n Enter second hex numbers ;”;
+
+b.read();
+
+c=add(a,b);
+
+count<<”/nSum=”;
+
+c.print();
+
+count<<”/nProduct=”;
+
+c=multiply(a,b);
+
+c.print();
+
+}
